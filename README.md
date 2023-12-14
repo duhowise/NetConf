@@ -1,1 +1,1 @@
-# NetConf
+Let's take a journey through the history of complex types in Entity Framework Core (EF Core) from version 2.1 to 8, along with examples of how to configure them for each version.
