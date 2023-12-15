@@ -8,8 +8,15 @@ namespace ConsoleApp2
         {
             modelBuilder.Entity<Customer>(entity =>
             {
-                entity.OwnsOne(e => e.Address);
+                entity.OwnsOne(e => e.BillingAddress);
+                entity.OwnsOne(e => e.ShippingAddress);
             });
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=localhost;Database=SampleNet2;User Id=sa;Password=password");
+            base.OnConfiguring(optionsBuilder);
         }
     }
 }
