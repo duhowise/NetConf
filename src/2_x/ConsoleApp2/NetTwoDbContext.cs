@@ -15,7 +15,7 @@ namespace ConsoleApp2
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost;Database=SampleNet2;User Id=sa;Password=password");
+            optionsBuilder.UseSqlServer("Server=localhost;Database=SampleNet2;Integrated Security=True");
             base.OnConfiguring(optionsBuilder);
         }
     }
